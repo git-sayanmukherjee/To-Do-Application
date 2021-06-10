@@ -1,10 +1,22 @@
-import "./styles.css";
+import './App.css';
+import SiteHeader from './commons/siteHeader.js';
+import SiteFooter from './commons/siteFooter.js';
+import Listing from './Listing.js';
+import DiaryPage from './DiaryPage.js';
+import CalendarReact from './Calendar.js';
 
-export default function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
+function App() {
+    return (
+        <div className="site-body">
+            <SiteHeader />
+            <div className="row">
+                <div className="col-md-3"><Listing /></div>
+                <div className="col-md-6"><DiaryPage /></div>
+                <div className="col-md-3"><CalendarReact /></div>
+            </div>
+            <SiteFooter />
+        </div>
+    );
 }
+
+export default App;
